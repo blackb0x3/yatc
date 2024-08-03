@@ -8,6 +8,11 @@ namespace YATC.Core;
 
 public interface ITwitchAuthenticationService
 {
+    /// <summary>
+    /// Opens the Twitch OAuth page so a callback can be received containing the Oauth token upon successful login.
+    /// </summary>
+    /// <param name="cancellationToken"></param>
+    /// <returns>The OAuth token prefixed with `oauth:` if login was successful. Otherwise: empty string.</returns>
     Task<string> AuthenticateTwitchUser(CancellationToken cancellationToken);
 }
 
@@ -22,6 +27,7 @@ public class TwitchAuthenticationService : ITwitchAuthenticationService
         _config = config;
     }
 
+    /// <inheritdoc cref="ITwitchAuthenticationService.AuthenticateTwitchUser"/>
     public async Task<string> AuthenticateTwitchUser(CancellationToken cancellationToken)
     {
         _logger.LogDebug(new { msg = "Opening Twitch auth URL" });
