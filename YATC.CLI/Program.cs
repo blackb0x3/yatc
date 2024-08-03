@@ -4,7 +4,7 @@ using Microsoft.Extensions.Hosting;
 using Serilog;
 using YATC.CLI;
 using YATC.CLI.IoC;
-using YATC.Core;
+using YATC.Core.Services;
 
 var configuration = new ConfigurationBuilder()
     .AddJsonFile("appsettings.json")

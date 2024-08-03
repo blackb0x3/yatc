@@ -1,5 +1,5 @@
 using Microsoft.Extensions.DependencyInjection;
-using YATC.Core;
+using YATC.Core.Services;
 
 namespace YATC.CLI.IoC;
 

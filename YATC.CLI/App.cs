@@ -1,6 +1,5 @@
-using System.Net;
 using CommandLine;
-using YATC.Core;
+using YATC.Core.Services;
 
 namespace YATC.CLI;
 
@@ -37,7 +36,6 @@ public class App
 
     private async Task RunInternal(YatcVerb parsedArgs, CancellationToken cancellationToken)
     {
-        // TODO
         var oauthToken = await _twitchAuthService.AuthenticateTwitchUser(cancellationToken);
 
         _logger.LogDebug(new { msg = "Authenticated through Twitch", oauthToken = new string('*', oauthToken.Length) });

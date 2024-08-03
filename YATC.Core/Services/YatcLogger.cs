@@ -1,6 +1,6 @@
 using Serilog;
 
-namespace YATC.Core;
+namespace YATC.Core.Services;
 
 public interface IYatcLogger : IDisposable
 {

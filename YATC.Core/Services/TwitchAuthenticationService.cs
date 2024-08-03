@@ -1,10 +1,9 @@
 using System.Diagnostics;
 using System.Net;
 using System.Runtime.InteropServices;
-using System.Text.Json;
 using Microsoft.Extensions.Configuration;
 
-namespace YATC.Core;
+namespace YATC.Core.Services;
 
 public interface ITwitchAuthenticationService
 {
